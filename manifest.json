@@ -1,0 +1,22 @@
+{
+  "name": "Tumblr Autoclosr : Simple extension to automatically close Tumblr 'celebration' windows",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Since their latest updates, Tumblr's bookmarklet no longer autocloses after a successful post.  If you are rapidly posting multiple articles this can get pretty system-intensive (animations) and annoying to close.",
+  "homepage_url": "http://github.com/pentaphobe/tumblr_autoclosr",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "content_scripts": [
+    {
+      "matches":["*://www.tumblr.com/widgets/*"],
+      "js":["src/bg/background.js"]
+    }
+  ],
+  "permissions": [
+    "tabs", "*://www.tumblr.com/widgets/*"
+  ]
+}
